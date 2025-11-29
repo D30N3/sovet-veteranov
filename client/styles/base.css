@@ -1,8 +1,17 @@
+/* 
+Inter Light-Italic
+Inter Regular
+Inter Medium
+Inter Bold 
+*/
+
 :root {
 /* Colors */
     --mainWhite: #FFF;
     --mainBlack: #1C1C1C;
-    --mainRed: #910000  Font-sizes (PC)
+    --lightGray: #D9D9D9;
+    --stroke: #666666;
+    --mainRed: #910000;
 
 /* Font-Sizes (PC) */
     --pcHeadingText: 96px;
@@ -15,7 +24,7 @@
     --mobileSubHeaderText: 13px;
     --mobileNewsHeadingText: 12px;
     --mobileMainText: 9px;
-    --mobileNavigationText: 9px Gaps
+    --mobileNavigationText: 9px;
 
 /* Gaps */
     --newsPostSectionGap: 100px;
