@@ -11,8 +11,8 @@ header {
     gap: var(--homePageGap);
 }
 .header-logo-container {
-    width: 135px;
-    height: 135px;
+    width: auto;
+    height: 100%;
     border-radius: 50%;
     background-color: var(--lightGray);
 }
@@ -33,7 +33,7 @@ header {
 .line {
     width: 100%;
     height: 2px;
-    background-color: var(--stroke);
+    background-color: #666666;
 }
 
 body {
