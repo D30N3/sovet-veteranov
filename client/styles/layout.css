@@ -1,4 +1,6 @@
 /* HEADER */
+/* + */
+/* FOOTER */
 header {
     padding: 40px 0 20px;
     font-size: var(--pcNavigationText);
@@ -34,8 +36,4 @@ header {
     width: 100%;
     height: 2px;
     background-color: var(--stroke);
-}
-
-body {
-    background-color: var(--lightGray);
 }
