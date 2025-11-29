@@ -1,0 +1,46 @@
+:root {
+/* Colors */
+    --mainWhite: #FFF;
+    --mainBlack: #1C1C1C;
+    --mainRed: #910000  Font-sizes (PC)
+
+/* Font-Sizes (PC) */
+    --pcHeadingText: 96px;
+    --pcSubHeaderText: 64px;
+    --pcNewsHeadingText: 48px;
+    --pcMainText: 32px;
+    --pcNavigationText: 24px; 
+/* Font-sizes (Mobile) */
+    --mobileHeadingText: 20px;
+    --mobileSubHeaderText: 13px;
+    --mobileNewsHeadingText: 12px;
+    --mobileMainText: 9px;
+    --mobileNavigationText: 9px Gaps
+
+/* Gaps */
+    --newsPostSectionGap: 100px;
+    --newsBlockGap: 40px;
+    --homePageGap: 90px;
+    --otherPagesGap: 60px;
+    --headerListGap: 107px;
+}
+
+body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: var(--mainBlack);
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+}
