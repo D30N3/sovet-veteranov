@@ -1,4 +1,48 @@
-/* 
+/*
+ • Базовые стили проекта
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFFFF;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+button {
+    cursor: pointer;
+}
+/*
 Inter Light-Italic
 Inter Regular
 Inter Medium
@@ -31,24 +75,4 @@ Inter Bold
     --homePageGap: 90px;
     --otherPagesGap: 60px;
     --headerListGap: 107px;
-}
-
-body, * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a {
-    text-decoration: none;
-    color: var(--mainBlack);
-}
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container {
-    width: 80%;
-    margin: 0 auto;
-    height: auto;
 }
