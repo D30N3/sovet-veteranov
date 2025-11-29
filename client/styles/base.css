@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  • Базовые стили проекта
 */
@@ -42,8 +41,8 @@ img {
 }
 button {
     cursor: pointer;
-=======
-/* 
+}
+/*
 Inter Light-Italic
 Inter Regular
 Inter Medium
@@ -77,25 +76,4 @@ Inter Bold
     --homePageGap: 90px;
     --otherPagesGap: 60px;
     --headerListGap: 107px;
-}
-
-body, * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a {
-    text-decoration: none;
-    color: var(--mainBlack);
-}
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container {
-    width: 80%;
-    margin: 0 auto;
-    height: auto;
->>>>>>> de0885f763e55617f9854218b1f6f192ba3d7ed1
 }
