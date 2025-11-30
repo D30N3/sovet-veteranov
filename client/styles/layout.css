@@ -32,6 +32,7 @@ header {
         justify-content: space-around;
     }
 }
+
 .header-navigation li a {
     text-decoration: none;
     position: relative;
