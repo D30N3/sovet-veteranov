@@ -28,71 +28,30 @@ const posts = [
 ]
 
 // Posts render
-function renderPosts(posts) {
-    const container = document.getElementById("posts-container");
+function renderPosts() {
+    const container = document.getElementById('posts-container');
+
     posts.forEach((post) => {
-        const postElement = document.createElement("div");
-        postElement.classList.add("post-element");
+        let highlightHeading = post.highlightHeading;
+        let heading = post.heading;
+        let postImage = post.postImage;
+        let postText = post.postText;
+        let date = post.date;
+        let hashtag = post.hashtag;
 
-        const headingPost = document.createElement("p");
-        headingPost.classList.add("paragraph");
-        const headingSpan = document.createElement("span");
-        headingSpan.classList.add("paragraph-heading");
-        headingSpan.textContent = post.highlightHeading + ":";
-
-        headingPost.appendChild(headingSpan);
-        headingPost.append(" " + post.heading);
-
-        const img = document.createElement("img");
-        img.src = post.postImage;
-        img.alt = "";
-
-        const paragraphText = document.createElement("p");
-        paragraphText.classList.add("paragraph-text");
-        paragraphText.textContent = post.postText;
-
-        const dateContainer = document.createElement("div");
-        dateContainer.classList.add("date-container");
-        const datePost = document.createElement("p");
-        datePost.classList.add("paragraph-text");
-        datePost.textContent = post.date + " ";
-        const hashtagSpan = document.createElement("span");
-        hashtagSpan.classList.add("hashtag");
-        hashtagSpan.textContent = post.hashtag;
-        datePost.appendChild(hashtagSpan);
-        const line = document.createElement("div");
-        line.classList.add("line");
-
-        dateContainer.appendChild(datePost);
-        dateContainer.appendChild(line);
-
-        postElement.appendChild(headingPost);
-        postElement.appendChild(img);
-        postElement.appendChild(paragraphText);
-        postElement.appendChild(dateContainer);
-
-        container.appendChild(postElement);
-        console.log(postElement)
+        container.insertAdjacentHTML('beforeend',
+            `<div class="post-element">
+                <p class="paragraph"><span class="paragraph-heading">${highlightHeading}:</span> ${heading}</p>
+                <img src="${postImage}" alt="">
+                <p class="paragraph-text">${postText}</p>
+                <div class="date-container">
+                    <p class="paragraph-text">${date} <span class="hashtag">${hashtag}</span></p>
+                    <div class="line"></div>
+                </div>
+            </div>
+        `);
     })
 }
-
-// Burger Button
-const burger = document.getElementById("burger-button");
-const menu = document.getElementById("mobile-menu");
-
-const overlay = document.createElement("div");
-overlay.id = "menu-overlay";
-document.body.appendChild(overlay);
-
-burger.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    overlay.classList.toggle("active");
-});
-
-overlay.addEventListener("click", () => {
-    menu.classList.remove("active");
-    overlay.classList.remove("active");
-});
 
 // Carousel buttons
 const container = document.querySelector(".hashtag-container");
@@ -107,4 +66,4 @@ left.addEventListener("click", () => {
     container.scrollBy({ left: -200, behavior: "smooth" });
 });
 
-renderPosts(posts);
+renderPosts();

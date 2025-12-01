@@ -1,0 +1,16 @@
+.team-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    padding: 90px 0;
+}
+.team-members-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.member-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
