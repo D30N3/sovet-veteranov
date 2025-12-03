@@ -1,0 +1,17 @@
+.input-photo input{
+    border: 2px dashed black;
+    cursor: pointer;
+}
+.date-hastag {
+    display: flex;
+    gap: 100px;
+}
+.date {
+    width: 40%;
+}
+.date-input {
+    height: 250px !important;
+    border-radius: 40px !important; 
+    text-align: center !important;
+    padding: 0 !important;
+}
