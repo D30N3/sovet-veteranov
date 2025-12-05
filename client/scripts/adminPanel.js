@@ -5,8 +5,13 @@ let isOpen = false;
 
 hastagBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (!isOpen) {
-        hastagList.style.maxHeight = hastagList.scrollHeight + 'px';
+    if (!isOpen) {  
+        if (window.innerWidth > 688) {
+            hastagList.style.maxHeight = "200px";
+        }
+        if (window.innerWidth < 688) {
+            hastagList.style.maxHeight = "90px";
+        }
         hastagList.style.opacity = "1";
         hastagList.style.marginTop = "20px"
         hastagList.style.pointerEvents = "all";

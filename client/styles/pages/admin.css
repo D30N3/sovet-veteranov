@@ -65,6 +65,9 @@
     transform: rotate(0);
     transition: transform 0.2s ease;
 }
+.max-height-200 {
+    max-height: 200px;
+}
 .hastag-button-cont {
     position: relative;
 }
@@ -75,7 +78,17 @@
     height: auto;
     width: 100%;
     top: 55px;
-    border: 6px solid #F5F5F5;
+    border-right: 6px solid #F5F5F5;
+    border-left: 6px solid #F5F5F5;
+    border-bottom: 6px solid #F5F5F5;
+}
+.form-heading {
+    font-size: 45px;
+}
+.hastag-list-element {
+    height: 180px;
+    overflow-y: scroll;
+    gap: 10px;
 }
 #hastag-list {
     overflow: hidden;
@@ -87,24 +100,178 @@
     background-color: white;
     margin-top: 20px;
     display: flex;
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 30px;
     border-radius: 30px;
     gap: 50px;
-}
-.hastag-list ul {
-    gap: 20px;
-    height: 150px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    justify-content: space-between;
+    width: 85%;
 }
 .hastag-list ul li {
     border-bottom: 2px solid #F5F5F5;
 }
-.hastag-list ul li a {
+.hastag-list-link {
     font-size: 20px;
     font-family: Inter Regular;
 }
 .main-text .input {
     padding-top: 25px;
     font-family: Inter Regular;
+}
+.input-heading-element {
+    font-size: 20px;
+}
+.holiday-heading {
+    font-size: 35px;
+}
+.holiday-button {
+    padding: 12px 40px; 
+    font-size: 20px; 
+    margin-top: 5px;
+    background-color: transparent;
+    border: 2px solid var(--mainGray);
+    font-size: clamp(20px, 1.5vw, 28px);
+    border-radius: 114px;
+    transition: all 0.1s ease;
+    color: var(--mainGray);
+    white-space: nowrap;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1250px) {
+    .form-heading {
+        font-size: 35px;
+    }
+    .input {
+        height: 55px;
+    }
+    .input::placeholder {
+        font-size: 18px;
+    }
+    .holiday-heading {
+        font-size: 27px;
+    }
+    .holiday-button {
+        padding: 10px 38px;
+    }
+    .hastag-list-link {
+        font-size: 17px;
+    }
+    .arrow-bottom {
+        top: 33px;
+        width: 23px;
+    }
+}
+@media (max-width: 1000px) {
+    .form-heading {
+        font-size: 25px;
+    }
+    .input {
+        height: 50px;
+    }
+    .input::placeholder {
+        font-size: 15px;
+    }
+    .input-heading-element {
+        font-size: 17px;
+    }
+    .button {
+        padding: 13px 60px;
+    }
+    .holiday-heading {
+        font-size: 23px;
+    }
+    .holiday-button {
+        padding: 10px 33px;
+    }
+    .hastag-list-link {
+        font-size: 15px;
+    }
+    .arrow-bottom {
+        top: 30px;
+        width: 21px;
+    }
+}
+@media (max-width: 854px) {
+    .holiday-heading {
+        font-size: 18px;
+    }
+    .holiday-button {
+        padding: 8px 30px;
+        font-size: 17px;
+    }
+    .hastag-list-color-container {
+        gap: 15px;
+    }
+    .hastag-list-link {
+        font-size: 13px;
+    }
+    .hastag-button p{
+        padding-left: 30px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 688px) {
+    .global-heading {
+        font-size: 26px;
+    }
+    .form-heading {
+        font-size: 19px;
+    }
+    .input {
+        height: 45px;
+    }
+    .input::placeholder {
+        font-size: 12px;
+    }
+    .input-heading-element {
+        font-size: 14px;
+    }
+    .button {
+        padding: 10px 60px;
+    }
+    .holiday-heading {
+        font-size: 15px;
+    }
+    .holiday-button {
+        padding: 8px 26px;
+        font-size: 15px;
+    }
+    .hastag-list-color-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow-y: scroll !important   ;
+        overflow-x: hidden;
+    }
+    #hastag-list {
+        width: 100%;
+    }
+    .hastag-list-element {
+        height: auto;
+        overflow-y: auto;
+    }
+    .hastag-list-container {
+        top: 50px;
+    }
+    .arrow-bottom {
+        width: 18px;
+        top: 29px;
+    }
+    .date-input {
+        border-radius: 20px;
+        height: 150px !important;
+    }
+}
+@media (max-width: 525px) {
+    .arrow-bottom {
+        width: 15px;
+        top: 29px;
+        left: 80%;
+    }
+    .hastag-button p{
+        padding-left: 20px;
+        font-size: 12px;
+    }
 }
