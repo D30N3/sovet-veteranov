@@ -1,0 +1,54 @@
+main {
+    gap: 3vw;
+    padding: 3vw 0;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Секция контактов */
+.contacts-container {
+    text-align: center;
+    gap: 2.3vw;
+}
+.info-wrapper {
+    gap: 3vw;
+}
+.contacts-wrapper {
+    gap: 1vw;
+    text-align: left;
+}
+.office-text {
+    color: var(--mainGray);
+    font-size: clamp(20px, 1.75vw, 56px);
+    font-family: "Inter Regular";
+}
+.office-span {
+    color: var(--mainRed);
+    font-size: clamp(20px, 1.75vw, 56px);
+    font-family: "Inter Semi Bold";
+}
+
+/* Секция районных отделений */
+.district-offices-section {
+    gap: 5vw;
+}
+.office-container {
+    width: 100%;
+    text-align: center;
+    gap: 3vw;
+}
+.office-name {
+    text-align: center;
+    color: var(--mainGray);
+    font-size: clamp(20px, 2vw, 60px);
+    font-family: "Inter Bold";
+}
+
+/* Секция карт */
+.map {
+    width: 100%;
+    height: 33vw;
+    border: none;
+}
