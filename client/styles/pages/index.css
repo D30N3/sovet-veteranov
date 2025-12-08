@@ -35,6 +35,16 @@
     flex-direction: column;
     gap: var(--homePageGap);
 }
+.posts-selected-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--homePageGap);
+}
+#no-posts-text {
+    font-family: "Inter Bold";
+    font-size: clamp(20px, 3vw, 42px);
+    text-align: center;
+}
 .post-element {
     display: flex;
     flex-direction: column;

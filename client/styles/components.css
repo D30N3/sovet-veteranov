@@ -118,7 +118,7 @@
     background-color: var(--mainGray);
 }
 .heading {
-    font-size: clamp(32px, 3vw, 56px);
+    font-size: clamp(48px, 3.5vw, 64px);
     font-family: "Inter Bold";
     color: var(--mainGray);
 }

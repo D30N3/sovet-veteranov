@@ -63,35 +63,33 @@
                 <button id="left-tag" class="carousel-btn">‹</button>
             
                 <div class="hashtag-container">
-                    <button class="button">#Спорт</button>
-                    <button class="button">#Отдых</button>
-                    <button class="button">#Здоровье</button>
-                    <button class="button">#ЖКХ</button>
-                    <button class="button">#Культура</button>
-                    <button class="button">#Социально-бытовой комитет</button>
-                    <button class="button">#Образование</button>
-                    <button class="button">#Военно-патриотический комитет</button>
-                    <button class="button">#Проблемные вопросы</button>
-                    <button class="button">#Решение проблемных вопросов</button>
-                    <button class="button">#Разное</button>
+                    <button class="button hashtag-button">#Спорт</button>
+                    <button class="button hashtag-button">#Отдых</button>
+                    <button class="button hashtag-button">#Здоровье</button>
+                    <button class="button hashtag-button">#ЖКХ</button>
+                    <button class="button hashtag-button">#Культура</button>
+                    <button class="button hashtag-button">#Социально-бытовой комитет</button>
+                    <button class="button hashtag-button">#Образование</button>
+                    <button class="button hashtag-button">#Военно-патриотический комитет</button>
+                    <button class="button hashtag-button">#Проблемные вопросы</button>
+                    <button class="button hashtag-button">#Решение проблемных вопросов</button>
+                    <button class="button hashtag-button">#Разное</button>
                 </div>
             
                 <button id="right-tag" class="carousel-btn">›</button>
             </div>
 
-            <div class="posts-container" id="posts-container">
-                <div class="post-element 1">
-                    <p class="paragraph"><span class="paragraph-heading">Заголовок:</span> текст заголовка! Ещё текст заголовка. Дополнительный текст заголовка для длины.</p>
-                    <img src="./assets/images/template.jpeg" alt="">
-                    <p class="paragraph-text">Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа</p>
-                    <div class="date-container">
-                        <p class="paragraph-text">Дек. 8, 2025 <span class="hashtag">#Здоровье</span></p>
-                        <div class="line"></div>
-                    </div>
-                </div>
+            <p id="no-posts-text" style="display: none;">Выбранных постов нет 😞</p>
+            
+            <div class="posts-selected-container" id="selected-posts-container" style="display: none;">
+
             </div>
 
-            <button class="button">Load Posts</button>
+            <div class="posts-container" id="posts-container">
+                <!-- Тут находятся посты -->
+            </div>
+
+            <button class="button" id="loadPosts">Загрузить посты</button>
         </section>
 
     </main>
