@@ -79,13 +79,58 @@ const posts = [
         date: "Дек. 8, 2025",
         hashtag: "#Разное"
     },
+
+    {
+        highlightHeading: "Разное",
+        heading: "текст заголовка! Ещё текст заголовка. Дополнительный текст заголовка для длины.",
+        postImage: "./assets/images/template.jpeg",
+        postText: "Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа",
+        date: "Дек. 8, 2025",
+        hashtag: "#Разное"
+    },
+
+    {
+        highlightHeading: "Разное",
+        heading: "текст заголовка! Ещё текст заголовка. Дополнительный текст заголовка для длины.",
+        postImage: "./assets/images/template.jpeg",
+        postText: "Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа",
+        date: "Дек. 8, 2025",
+        hashtag: "#Разное"
+    },
+
+    {
+        highlightHeading: "Разное",
+        heading: "текст заголовка! Ещё текст заголовка. Дополнительный текст заголовка для длины.",
+        postImage: "./assets/images/template.jpeg",
+        postText: "Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа",
+        date: "Дек. 8, 2025",
+        hashtag: "#Разное"
+    },
+
+    {
+        highlightHeading: "Разное",
+        heading: "текст заголовка! Ещё текст заголовка. Дополнительный текст заголовка для длины.",
+        postImage: "./assets/images/template.jpeg",
+        postText: "Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа",
+        date: "Дек. 8, 2025",
+        hashtag: "#Разное"
+    },
+
+    {
+        highlightHeading: "Разное",
+        heading: "текст заголовка! Ещё текст заголовка. Дополнительный текст заголовка для длины.",
+        postImage: "./assets/images/template.jpeg",
+        postText: "Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа",
+        date: "Дек. 8, 2025",
+        hashtag: "#Разное"
+    },
 ]
 
 // Posts render
 const container = document.getElementById('posts-container');
 function renderPosts(renderNum) {
     for (let i = 0; i < renderNum; i++) {
-        const post = posts[i]
+        const post = posts[i];
         container.insertAdjacentHTML('beforeend',
             `<div class="post-element">
                 <p class="paragraph"><span class="paragraph-heading">${post.highlightHeading}:</span> ${post.heading}</p>
@@ -115,29 +160,30 @@ left.addEventListener("click", () => {
 
 // Hashtag Logics
 const selectedContainer = [];
-const hashtagButtons = document.querySelectorAll('.hashtag-button')
+const hashtagButtons = hashtagContainer.querySelectorAll('.hashtag-button');
 
 hashtagButtons.forEach((hashtag) => {
     hashtag.addEventListener('click', () => {
-        const hashtagText = hashtag.textContent;
+        const hashtagText = hashtag.textContent.trim();
         hashtag.classList.toggle('active');
 
         if (hashtag.classList.contains('active')) {
             posts.forEach((post) => {
-                if (post.hashtag === hashtagText) {
+                if (post.hashtag.trim() == hashtagText) {
                     if (!selectedContainer.includes(post)) {
                         selectedContainer.push(post);
                     }
                 }
             });
+            
         } else {
             for (let i = selectedContainer.length - 1; i >= 0; i--) {
-                if (selectedContainer[i].hashtag === hashtagText) {
+                if (selectedContainer[i].hashtag.trim() == hashtagText) {
                     selectedContainer.splice(i, 1);
                 }
             }
         }
-        console.log(selectedContainer);
+
         renderSelectedPosts();
         containerUpdate();
     });
@@ -164,7 +210,7 @@ function renderSelectedPosts() {
 
 const noPostsText = document.getElementById("no-posts-text");
 function containerUpdate() {
-    const anyActive = document.querySelector('.button.active') !== null;
+    const anyActive = document.querySelector('.hashtag-button.active') !== null;
 
     if (anyActive && selectedContainer.length === 0) {
         container.style.display = "none";

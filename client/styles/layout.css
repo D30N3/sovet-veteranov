@@ -1,10 +1,11 @@
 /* HEADER */
 header {
-    padding: 40px 0 0;
+    padding: 2vw 0 1vw;
     font-size: var(--pcNavigationText);
     font-family: "Inter Regular";
     background-color: var(--mainWhite);
     width: 100%;
+    display: flex;
 }
 .header-container {
     display: flex;
@@ -72,8 +73,8 @@ header {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70%;
-    max-width: 300px;
+    width: clamp(50px, 50vw, 250px);
+    max-width: 50%;
     height: 100vh;
     background-color: var(--mainWhite);
     box-shadow: -4px 0 15px rgba(0,0,0,0.2);
@@ -129,6 +130,9 @@ header {
     .header-navigation-container {
         justify-content: start;
         display: none;
+    }
+    #mobile-menu nav ul li a {
+        font-size: clamp(20px, 5vw, 32px);
     }
     .header-logo-container {
         img {
