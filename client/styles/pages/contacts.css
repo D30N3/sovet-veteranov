@@ -8,7 +8,7 @@ main {
 }
 
 /* Секция контактов */
-.contacts-container {
+.contacts-main-container {
     text-align: center;
     gap: 2.3vw;
 }
@@ -32,12 +32,12 @@ main {
 
 /* Секция районных отделений */
 .district-offices-section {
-    gap: 5vw;
+    gap: 2.5vw;
 }
 .office-container {
     width: 100%;
     text-align: center;
-    gap: 3vw;
+    gap: 1vw;
 }
 .office-name {
     text-align: center;

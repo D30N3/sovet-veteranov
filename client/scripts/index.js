@@ -249,4 +249,14 @@ const button = document.getElementById("loadPosts");
     }
 )
 
+// Active Button
+const btn = document.querySelector(".button");
+btn.addEventListener("click", () => {
+    if (btn.classList.contains("active")) {
+        btn.classList.remove("active");
+    } else {
+        btn.classList.add("active");
+    }
+});
+
 renderPosts(loadPostNum);

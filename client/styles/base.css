@@ -74,7 +74,7 @@ Inter Bold
 /* Gaps */
     --newsPostSectionGap: 100px;
     --newsBlockGap: 40px;
-    --homePageGap: clamp(50px, 2vw, 90px);
+    --homePageGap: clamp(50px, 5vw, 90px);
     --otherPagesGap: 60px;
     --headerListGap: 107px;
 }
