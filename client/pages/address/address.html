@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратиться</title>
     <link rel="stylesheet" href="../../styles/base.css">
     <link rel="stylesheet" href="../../styles/components.css">
     <link rel="stylesheet" href="../../styles/fonts.css">
@@ -10,156 +12,143 @@
     <link rel="stylesheet" href="../../styles/pages/address.css">
 </head>
 <body>
-
     <main class="container">
         <div class="address-container flex-col">
             <div class="address-heading global-heading" style="text-align: center">Обратиться</div>
 
-            <div class="address-buttons-container flex-center">
-                <button class="button" id="yourQuestion">Ваши вопросы</button>
-                <button class="button" id="solutionQuestion">Решения вопросов</button>
-                <button class="button form" id="firstBtn">Форма для обращения</button>
-            </div>
-
-            <div class="address-form-container show">
-                <form action="" class="flex-col" style="gap: 30px;">
-                    <div class="form-heading global-heading flex-center">Форма для вашего вопроса</div>
-
-                    <div class="form-requiredFields flex-center">
-                        Поля помеченные <span class="redstar" style="margin: 0 10px 0 10px;">*</span> обязательны к заполнению!
-                    </div>
-
-                    <div class="name-container">
-                        <p class="global-heading name-container-heading">Фио <span class="redstar">*</span></p>
-
-                        <input type="text" class="input" placeholder="Укажите как вас зовут">
-                    </div>
-
-                    <div class="mail-container">
-                        <p class="global-heading name-container-heading" >Электронная почта <span class="redstar">*</span></p>
-
-                        <input type="text" class="input" placeholder="Укажите вашу эл. почту для получения ответа">
-                    </div>
-
-                    <div class="number-container">
-                        <p class="global-heading name-container-heading">Телефон</p>
-
-                        <input type="text" class="input" placeholder="Укажите ваш номер телефона">
-                    </div>
-
-                    <div class="question-container">
-                        <p class="global-heading name-container-heading">Ваш вопрос <span class="redstar">*</span></p>
-
-                        <textarea
-                                id="question-textarea"
-                                class="input"
-                                placeholder="Подробно опишите ваш вопрос"
-                                style="height: 300px; padding-top: 25px; border-radius: 30px"
-                        ></textarea>
-                    </div>
-
-
-                    <div class="personalData flex-center">
-                        Нажимая кнопку "Отправить" вы даете своё согласие на обработку и использование своих персональных данных, согласно ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г.
-                    </div>
-
-                    <button class="button">
-                        Отправить
-                    </button>
-                </form>
-            </div>
-
-            <div class="yourQuestion-container-list flex-col flex-center unshow">
-                <div class="question-heading global-heading" style="text-align: center">Ваши вопросы</div>
-
-                <div class="questionCard flex-col" style="gap: 20px;">
-                    <div class="card-heading flex-center" style="gap: 10px; justify-content: start">
-                        <span class="paragraph-heading">Заголовок:</span>
-                        <p class="paragraph">текст заголовка! Ещё текст заголовка</p>
-                    </div>
-
-                    <img src="" alt="">
-
-                    <div class="card-paragraph ">
-                        Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа
-                        Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа
-                    </div>
-
-                    <div class="card-date flex-center">
-                        <div class="date card-paragraph" style="width: 150px;">Дек. 8, 2025</div>
-                        <div class="line"></div>
-                    </div>
-                </div>
-
-
-
-                <div class="questionCard flex-col" style="gap: 20px;">
-                    <div class="card-heading flex-center" style="gap: 10px; justify-content: start">
-                        <span class="paragraph-heading">Заголовок:</span>
-                        <p class="paragraph">текст заголовка! Ещё текст заголовка</p>
-                    </div>
-
-                    <div class="img"></div>
-
-                    <div class="card-paragraph ">
-                        Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа
-                    </div>
-
-                    <div class="card-date flex-center">
-                        <div class="date card-paragraph" style="width: 150px;">Дек. 8, 2025</div>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="succes-question-container flex-col unshow " style="justify-content: center; align-items: center">
-                <div class="question-heading global-heading" style="text-align: center">Решение вопросов</div>
-
-                <div class="questionCard flex-col" style="gap: 20px;">
-                    <div class="card-heading flex-center" style="gap: 10px; justify-content: start">
-                        <span class="paragraph-heading">Заголовок:</span>
-                        <p class="paragraph">текст заголовка! Ещё текст заголовка</p>
-                    </div>
-
-                    <img src="" alt="">
-
-                    <div class="card-paragraph ">
-                        Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа
-                        Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа
-                    </div>
-
-                    <div class="card-date flex-center">
-                        <div class="date card-paragraph" style="width: 150px;">Дек. 8, 2025</div>
-                        <div class="line"></div>
-                    </div>
-                </div>
-
-
-
-                <div class="questionCard flex-col" style="gap: 20px;">
-                    <div class="card-heading flex-center" style="gap: 10px; justify-content: start">
-                        <span class="paragraph-heading">Заголовок:</span>
-                        <p class="paragraph">текст заголовка! Ещё текст заголовка</p>
-                    </div>
-
-                    <div class="img"></div>
-
-                    <div class="card-paragraph ">
-                        Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа. Параграф, текст прараграфа текст прараграфа текст прараграфа текст прараграфа
-                    </div>
-
-                    <div class="card-date flex-center">
-                        <div class="date card-paragraph" style="width: 150px;">Дек. 8, 2025</div>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="address-buttons-container flex-center">
+            <button class="button" id="yourQuestion" type="button">Ваши вопросы</button>
+            <button class="button" id="solutionQuestion" type="button">Решения вопросов</button>
+            <button class="button form" id="firstBtn" type="button">Форма для обращения</button>
         </div>
-    </main>
 
-    <script src="../../scripts/address.js"></script>
-    <script src="../../scripts/components.js"></script>
+        <div class="address-form-container show" style="margin-top: 50px;">
+            <form action="" class="flex-col" style="gap: 30px;">
+                <div class="form-heading global-heading flex-center">Форма для вашего вопроса</div>
+
+                <div class="form-requiredFields flex-center">
+                    Поля помеченные <span class="redstar" style="margin: 0 10px 0 10px;">*</span> обязательны к заполнению!
+                </div>
+
+                <div class="name-container">
+                    <p class="global-heading name-container-heading">ФИО <span class="redstar">*</span></p>
+                    <input type="text" class="input" placeholder="Укажите как вас зовут" required>
+                </div>
+
+                <div class="mail-container">
+                    <p class="global-heading name-container-heading">Электронная почта <span class="redstar">*</span></p>
+                    <input type="email" class="input" placeholder="Укажите вашу эл. почту для получения ответа" required>
+                </div>
+
+                <div class="number-container">
+                    <p class="global-heading name-container-heading">Телефон</p>
+                    <input type="tel" class="input" placeholder="Укажите ваш номер телефона">
+                </div>
+
+                <div class="question-container">
+                    <p class="global-heading name-container-heading">Ваш вопрос <span class="redstar">*</span></p>
+                    <textarea
+                        id="question-textarea"
+                        class="input"
+                        placeholder="Подробно опишите ваш вопрос"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="personalData flex-center">
+                    Нажимая кнопку "Отправить" вы даете своё согласие на обработку и использование своих персональных данных, согласно ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г.
+                </div>
+
+                <button class="button send-btn" type="submit">Отправить</button>
+            </form>
+        </div>
+
+        <div class="yourQuestion-container-list flex-col flex-center unshow">
+            <div class="question-heading global-heading form-heading" style="text-align: center">Ваши вопросы</div>
+
+            <div class="questionCard flex-col" style="gap: 20px;">
+                <div class="card-heading flex-center" style="gap: 10px; justify-content: start">
+                    <span class="paragraph-heading">Заголовок:</span>
+                    <p class="paragraph">текст заголовка! Ещё текст заголовка</p>
+                </div>
+
+                <img src="" alt="Изображение вопроса">
+
+                <div class="card-paragraph">
+                    Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа
+                    Параграф, текст параграфа текст параграфа текст параграфа текст параграфа.Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа
+                </div>
+
+                <div class="card-date flex-center">
+                    <div class="date card-paragraph" style="width: 150px;">Дек. 8, 2025</div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <div class="questionCard flex-col" style="gap: 20px;">
+                <div class="card-heading flex-center" style="gap: 10px; justify-content: start">
+                    <span class="paragraph-heading">Заголовок:</span>
+                    <p class="paragraph">текст заголовка! Ещё текст заголовка</p>
+                </div>
+
+                <div class="img"></div>
+
+                <div class="card-paragraph">
+                    Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа
+                </div>
+
+                <div class="card-date flex-center">
+                    <div class="date card-paragraph" style="width: 150px;">Дек. 8, 2025</div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="succes-question-container flex-col unshow" style="justify-content: center; align-items: center">
+            <div class="question-heading global-heading form-heading" style="text-align: center">Решение вопросов</div>
+
+            <div class="questionCard flex-col" style="gap: 20px;">
+                <div class="card-heading flex-center" style="gap: 10px; justify-content: start">
+                    <span class="paragraph-heading">Заголовок:</span>
+                    <p class="paragraph">текст заголовка! Ещё текст заголовка</p>
+                </div>
+
+                <img src="" alt="Изображение решения">
+
+                <div class="card-paragraph">
+                    Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа
+                    Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа
+                </div>
+
+                <div class="card-date flex-center">
+                    <div class="date card-paragraph" style="width: 150px;">Дек. 8, 2025</div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <div class="questionCard flex-col" style="gap: 20px;">
+                <div class="card-heading flex-center" style="gap: 10px; justify-content: start">
+                    <span class="paragraph-heading">Заголовок:</span>
+                    <p class="paragraph">текст заголовка! Ещё текст заголовка</p>
+                </div>
+
+                <div class="img"></div>
+
+                <div class="card-paragraph">
+                    Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа. Параграф, текст параграфа текст параграфа текст параграфа текст параграфа
+                </div>
+
+                <div class="card-date flex-center">
+                    <div class="date card-paragraph" style="width: 150px;">Дек. 8, 2025</div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="../../scripts/address.js"></script>
+<script src="../../scripts/components.js"></script>
 
 </body>
 </html>
