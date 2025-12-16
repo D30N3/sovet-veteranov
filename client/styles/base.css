@@ -63,7 +63,7 @@ Inter Bold
     --pcSubHeaderText: 64px;
     --pcNewsHeadingText: 48px;
     --pcMainText: 32px;
-    --pcNavigationText: 24px; 
+    --pcNavigationText: 1.25vw;
 /* Font-sizes (Mobile) */
     --mobileHeadingText: 20px;
     --mobileSubHeaderText: 13px;
