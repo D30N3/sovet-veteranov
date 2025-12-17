@@ -6,7 +6,7 @@ header {
     background-color: var(--mainWhite);
     width: 100%;
     display: flex;
-    max-width: 1920px;
+    max-width: 2048px;
     margin: 0 auto;
 }
 .header-container {
@@ -160,7 +160,7 @@ header {
 footer {
     background-color: #2C2C2C;
     padding: 4vw 0;
-    max-width: 1920px;
+    max-width: 2048px;
     margin: 0 auto;
 }
 .footer-container {

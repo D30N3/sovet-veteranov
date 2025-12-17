@@ -11,7 +11,7 @@
 }
 .paragraph-heading {
     color: var(--mainRed);
-    font-size: clamp(20px, 3vw, 40px);
+    font-size: clamp(20px, 3.5vw, 40px);
     font-family: "Inter Semi Bold";
 }
 .heading {
@@ -21,7 +21,7 @@
 }
 .paragraph-text {
     color: var(--mainGray);
-    font-size: clamp(16px, 3vw, 30px);
+    font-size: clamp(14px, 3vw, 25px);
     font-family: "Inter Regular";
 }
 .card-paragraph {
