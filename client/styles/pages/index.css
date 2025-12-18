@@ -87,7 +87,6 @@ main {
         overflow-x: auto;
         gap: 12px;
         scroll-snap-type: x mandatory;
-        padding-bottom: 10px;
         scrollbar-width: none;
         z-index: 5;
     }
@@ -120,6 +119,6 @@ main {
         cursor: pointer;
     }
 
-    #left-tag { left: 0px; }
+    #left-tag { left: 0px;}
     #right-tag { right: 0px; }
 }
