@@ -1,278 +1,637 @@
-.input-photo input{
+.input-photo input {
     border: 2px dashed black;
     cursor: pointer;
-}
-.date-hastag {
+    }
+    
+    .date-hastag {
     display: flex;
     gap: 100px;
-}
-.date {
+    position: relative;
+    }
+    
+    .date {
     width: 40%;
-}
-.date-input {
+    }
+    
+    .date-input {
     height: 250px;
-    border-radius: 40px; 
+    border-radius: 40px;
     text-align: center;
     padding: 0;
-}
-.hastag {
+    }
+    
+    .hastag {
     width: 60%;
-}
-.hastag-input {
+    }
+    
+    .hastag-input {
     position: relative;
-}
-.hastag::placeholder {
+    }
+    
+    .hastag::placeholder {
     font-size: 19px;
-}
-.arrow-bottom {
+    }
+    
+    .arrow-bottom {
     position: absolute;
-    top: 35px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 50px;
-}
-.hastag-button {
+    transition: transform 0.2s ease;
+    pointer-events: none;
+    }
+    
+    .hastag-button {
     color: #8B8B8B;
     padding: 0;
     border-radius: 20px;
-}
-.hastag-button:focus {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 65px;
+    }
+    
+    .hastag-button:focus {
     outline: none;
-}
-.hastag-button p {
+    }
+    
+    .hastag-button p {
     text-align: left;
     padding-left: 60px;
-}
-.unshow {
+    padding-right: 80px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    }
+    
+    .unshow {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
     transform: translateY(50px);
     transition: max-height 0.3s, opacity 0.3s, transform 0.3s;
-}
-
-.show {
+    }
+    
+    .show {
     overflow: hidden;
     opacity: 1;
     pointer-events: all;
     transform: translateY(0);
     transition: max-height 0.3s, opacity 0.3s, transform 0.3s;
-}
-.rotate {
-    transform: rotate(180deg);
-    transition: transform 0.2s ease;
-}
-.unrotate {
-    transform: rotate(0);
-    transition: transform 0.2s ease;
-}
-.max-height-200 {
+    }
+    
+    .rotate {
+    transform: translateY(-50%) rotate(180deg);
+    }
+    
+    .unrotate {
+    transform: translateY(-50%) rotate(0);
+    }
+    
+    .max-height-200 {
     max-height: 200px;
-}
-.hastag-button-cont {
+    }
+    
+    .hastag-button-cont {
     position: relative;
-}
-.hastag-list-container  {
+    }
+    
+    .hastag-list-container {
     position: absolute;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    height: auto;
     width: 100%;
-    top: 55px;
-    border-right: 6px solid #F5F5F5;
-    border-left: 6px solid #F5F5F5;
-    border-bottom: 6px solid #F5F5F5;
-}
-.form-heading {
-    font-size: 45px;
-}
-.hastag-list-element {
-    height: 180px;
-    overflow-y: scroll;
-    gap: 10px;
-}
-#hastag-list {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s, opacity 0.2s, margin 0.2s;
-    margin-top: 0;
-}
-.hastag-list-color-container {
-    background-color: white;
-    margin-top: 20px;
-    display: flex;
-    gap: 50px;
-    justify-content: space-between;
-    width: 85%;
-}
-.hastag-list ul li {
-    border-bottom: 2px solid #F5F5F5;
-}
-.hastag-list-link {
-    font-size: 20px;
-    font-family: Inter Regular;
-}
-.main-text .input {
-    padding-top: 25px;
-    font-family: Inter Regular;
-}
-.input-heading-element {
-    font-size: 20px;
-    text-align: left;
-}
-.holiday-heading {
-    font-size: 35px;
-}
-.holiday-button {
-    padding: 12px 40px; 
-    font-size: 20px; 
-    margin-top: 5px;
-    background-color: transparent;
-    border: 2px solid var(--mainGray);
-    font-size: clamp(20px, 1.5vw, 28px);
-    border-radius: 114px;
-    transition: all 0.1s ease;
-    color: var(--mainGray);
-    white-space: nowrap;
-    min-width: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@media (max-width: 1250px) {
+    top: 70px;
+    left: 0;
+    z-index: 10;
+    background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e8e8;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    }
+    
+    .hastag-list-container.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: all;
+    }
+
+    .admin-heading {
+        font-size: 50px;
+    }
+
     .form-heading {
         font-size: 35px;
     }
+    
+    .hastag-list-element {
+    height: auto;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #c4c4c4 #f5f5f5;
+    }
+    
+    .hastag-list-element::-webkit-scrollbar {
+    width: 8px;
+    }
+    
+    .hastag-list-element::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 10px;
+    margin: 5px 0;
+    }
+    
+    .hastag-list-element::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+    transition: background 0.2s;
+    }
+    
+    .hastag-list-element::-webkit-scrollbar-thumb:hover {
+    background: #8B8B8B;
+    }
+    
+    #hastag-list {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    margin-top: 0;
+    pointer-events: none;
+    }
+    
+    .hastag-list-color-container {
+    background-color: transparent;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 25px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 250px;
+    }
+    
+    .hastag-list {
+    flex: 1;
+    min-width: 0;
+    height: 200px;
+    overflow-y: scroll;
+    }
+    
+    .hastag-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    
+    .hastag-list ul li {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+    }
+    
+    .hastag-list ul li:last-child {
+    border-bottom: none;
+    }
+    
+    .hastag-list ul li:hover {
+    background-color: #f8f8f8;
+    }
+    
+    .hastag-list-link {
+    font-size: 18px;
+    font-family: Inter Regular;
+    display: block;
+    padding: 12px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    }
+    
+    .hastag-list-link:hover {
+    color: var(–mainGray, #666);
+    padding-left: 20px;
+    background-color: #f0f0f0;
+    }
+    
+    .main-text .input {
+    padding-top: 25px;
+    font-family: Inter Regular;
+    }
+    
+    .input-heading-element {
+    font-size: 20px;
+    text-align: left;
+    }
+    
+    .holiday {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    
+    .holiday-heading {
+    font-size: 35px;
+    flex: 1;
+    min-width: 200px;
+    }
+    
+    .holiday-button {
+    padding: 12px 40px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid var(–mainGray);
+    border-radius: 114px;
+    transition: all 0.1s ease;
+    color: var(–mainGray);
+    white-space: nowrap;
+    flex-shrink: 0;
+    }
+    
+    /* Tablet */
+    @media (max-width: 1250px) {
+        .admin-heading {
+            font-size: 45px;
+        }
+    .form-heading {
+    font-size: 30px;
+    }
     .input {
         height: 55px;
+        border-radius: 18px;
+    }
+    textarea.input { 
+        border-radius: 18px;
+    }
+    .button {
+        border-radius: 18px;
     }
     .input::placeholder {
         font-size: 18px;
     }
-    .holiday-heading {
-        font-size: 27px;
+    
+    .date-hastag {
+        gap: 60px;
     }
-    .holiday-button {
-        padding: 10px 38px;
-    }
-    .hastag-list-link {
-        font-size: 17px;
-    }
+    
     .arrow-bottom {
-        top: 33px;
-        width: 23px;
+        right: 40px;
     }
-}
-@media (max-width: 1000px) {
+    
+    .holiday-heading {
+        font-size: 30px;
+    }
+    
+    .holiday-button {
+        padding: 10px 35px;
+        font-size: 18px;
+    }
+    
+    .hastag-list-link {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+    
+    .hastag-list-container {
+        top: 65px;
+    }
+    
+    .hastag-list-color-container {
+        padding: 20px 25px;
+    }
+    
+    }
+    
+    @media (max-width: 1000px) {
+        .admin-heading {
+            font-size: 38px;
+        }
     .form-heading {
-        font-size: 25px;
+    font-size: 23px;
     }
     .input {
         height: 50px;
+        border-radius: 16px;
     }
+    
     .input::placeholder {
         font-size: 15px;
     }
+    
     .input-heading-element {
         font-size: 17px;
     }
+    
     .button {
         padding: 13px 60px;
+        border-radius: 18px;
     }
-    .holiday-heading {
-        font-size: 23px;
+    
+    .date-hastag {
+        gap: 40px;
     }
-    .holiday-button {
-        padding: 10px 33px;
-    }
-    .hastag-list-link {
-        font-size: 15px;
-    }
+    
     .arrow-bottom {
-        top: 30px;
-        width: 21px;
+        right: 30px;
     }
-}
-@media (max-width: 854px) {
+    
+    .hastag-button {
+        min-height: 55px;
+    }
+    
+    .hastag-button p {
+        padding-left: 40px;
+        padding-right: 70px;
+    }
+    
     .holiday-heading {
-        font-size: 18px;
-    }
-    .holiday-button {
-        padding: 8px 30px;
-        font-size: 17px;
-    }
-    .hastag-list-color-container {
-        gap: 15px;
-    }
-    .hastag-list-link {
-        font-size: 13px;
-    }
-    .hastag-button p{
-        padding-left: 30px;
-        font-size: 16px;
-    }
-}
-@media (max-width: 688px) {
-    .global-heading {
         font-size: 26px;
     }
+    
+    .holiday-button {
+        padding: 10px 30px;
+        font-size: 17px;
+    }
+    
+    .hastag-list-link {
+        font-size: 14px;
+        padding: 9px 10px;
+    }
+    
+    .hastag-list-element {
+        max-height: 320px;
+    }
+    
+    .hastag-list-container {
+        top: 60px;
+    }
+    
+    .hastag-list-color-container {
+        padding: 18px 22px;
+    }
+    
+    }
+    
+    @media (max-width: 854px) {
+        .admin-heading {
+            font-size: 32px;
+        }
+        .form-heading {
+            font-size: 17px;
+        }
+    .date-hastag {
+    flex-direction: column;
+    gap: 30px;
+    }
+    .date,
+    .hastag {
+        width: 100%;
+    }
+    .button {
+        border-radius: 18px;
+    }
+    .date-input {
+        height: 150px;
+    }
+    
+    .arrow-bottom {
+        right: 25px;
+    }
+    
+    .hastag-button {
+        min-height: 50px;
+    }
+    
+    .hastag-button p {
+        padding-left: 30px;
+        padding-right: 60px;
+        font-size: 16px;
+    }
+    
+    .holiday-heading {
+        font-size: 22px;
+    }
+    
+    .holiday-button {
+        padding: 10px 28px;
+        font-size: 16px;
+    }
+    
+    .hastag-list-color-container {
+        gap: 20px;
+        padding: 15px 20px;
+        min-height: 280px;
+    }
+    
+    .hastag-list-link {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+    
+    .hastag-list-element {
+        max-height: 280px;
+    }
+    
+    .hastag-list-container {
+        top: 58px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .input {
+        border-radius: 14px;
+    }
+    }
+    
+    /* Mobile */
+    @media (max-width: 688px) {
+        .admin-heading {
+            font-size: 26px;
+        }
     .form-heading {
-        font-size: 19px;
+    font-size: 15px;
     }
     .input {
         height: 45px;
+        border-radius: 12px;
     }
+    
     .input::placeholder {
         font-size: 12px;
     }
+    
     .input-heading-element {
         font-size: 14px;
     }
+    
     .button {
         padding: 10px 60px;
+        border-radius: 12px;
     }
-    .holiday-heading {
-        font-size: 15px;
+    
+    .date-hastag {
+        gap: 25px;
     }
-    .holiday-button {
-        padding: 8px 26px;
-        font-size: 15px;
+    
+    .date-input {
+        border-radius: 20px;
+        height: 120px;
     }
+    
+    .arrow-bottom {
+        right: 20px;
+    }
+    
+    .hastag-button {
+        min-height: 45px;
+        border-radius: 15px;
+    }
+    
+    .hastag-button p {
+        padding-left: 20px;
+        padding-right: 50px;
+        font-size: 14px;
+    }
+    
+    .hastag-list-container {
+        top: 50px;
+        border-radius: 20px;
+    }
+    
     .hastag-list-color-container {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        overflow-y: scroll !important;
-        overflow-x: hidden;
-        padding: 0 30px 0 30px;
-        border-radius: 30px;
+        gap: 15px;
+        padding: 20px;
+        min-height: 250px;
+        max-height: 200px !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+        scrollbar-color: #c4c4c4 #f5f5f5;
     }
+    
+    .hastag-list-color-container::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .hastag-list-color-container::-webkit-scrollbar-track {
+        background: #f5f5f5;
+        border-radius: 10px;
+        margin: 10px 0;
+    }
+    
+    .hastag-list-color-container::-webkit-scrollbar-thumb {
+        background: #c4c4c4;
+        border-radius: 10px;
+    }
+    
+    .hastag-list-color-container::-webkit-scrollbar-thumb:hover {
+        background: #8B8B8B;
+    }
+    
+    .hastag-list {
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+    }
+    
     #hastag-list {
         width: 100%;
     }
+    
     .hastag-list-element {
         height: auto;
-        overflow-y: auto;
+        max-height: none;
+        overflow-y: visible;
     }
-    .hastag-list-container {
-        top: 50px;
+    
+    .hastag-list-link {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+    
+    .holiday {
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+    
+    .holiday-heading {
+        font-size: 18px;
+        min-width: auto;
+        text-align: left;
+    }
+    
+    .holiday-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .events-cont .form-heading {
+        font-size: 26px;
+    }
+    
+    }
+    
+    @media (max-width: 525px) {
+    .hastag-button p {
+    padding-left: 15px;
+    padding-right: 45px;
+    font-size: 12px;
     }
     .arrow-bottom {
-        width: 18px;
-        top: 29px;
+        right: 15px;
     }
-    .date-input {
-        border-radius: 20px;
-        height: 150px !important;
+    
+    .holiday-heading {
+        font-size: 15px;
     }
-}
-@media (max-width: 525px) {
-    .arrow-bottom {
-        width: 15px;
-        top: 29px;
-        left: 80%;
+    
+    .holiday-button {
+        font-size: 13px;
+        padding: 8px 16px;
     }
-    .hastag-button p{
-        padding-left: 20px;
-        font-size: 12px;
+    .button {
+        border-radius: 12px;
     }
-}
+    }
+    @media (max-width: 380px) {
+        .admin-heading {
+            font-size: 20px;
+        }
+        .form-heading {
+            font-size: 14px;
+        }
+        .input {
+            border-radius: 8px;
+        }
+        .button {
+            border-radius: 12px;
+        }
+        .hastag-button p {
+        padding-left: 12px;
+        padding-right: 40px;
+        font-size: 11px;
+        }
+        .arrow-bottom {
+            right: 12px;
+        }
+        
+        .holiday-heading {
+            font-size: 13px;
+        }
+        
+        .holiday-button {
+            font-size: 12px;
+            padding: 7px 14px;
+        }
+        
+    }
