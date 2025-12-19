@@ -63,7 +63,7 @@ Inter Bold
     --pcSubHeaderText: 64px;
     --pcNewsHeadingText: 48px;
     --pcMainText: 32px;
-    --pcNavigationText: 24px; 
+    --pcNavigationText: 1.25vw;
 /* Font-sizes (Mobile) */
     --mobileHeadingText: 20px;
     --mobileSubHeaderText: 13px;
@@ -74,7 +74,7 @@ Inter Bold
 /* Gaps */
     --newsPostSectionGap: 100px;
     --newsBlockGap: 40px;
-    --homePageGap: 90px;
+    --homePageGap: clamp(50px, 5vw, 90px);
     --otherPagesGap: 60px;
     --headerListGap: 107px;
 }

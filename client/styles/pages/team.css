@@ -1,16 +1,20 @@
+main {
+    max-width: 2048px;
+    margin: 0 auto;
+}
 .team-section-container {
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 4vw;
     padding: 90px 0;
 }
 .team-members-container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 6vw;
 }
 .member-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2vw;
 }

@@ -1,16 +1,20 @@
+main {
+    max-width: 2048px;
+    margin: 0 auto;
+}
 .committee-section-container {
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 4vw;
     padding: 90px 0;
 }
 .committee-members-container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 6vw;
 }
 .committee-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2vw;
 }

@@ -8,7 +8,7 @@ main {
 }
 
 /* Секция контактов */
-.contacts-container {
+.contacts-main-container {
     text-align: center;
     gap: 2.3vw;
 }
@@ -21,28 +21,33 @@ main {
 }
 .office-text {
     color: var(--mainGray);
-    font-size: clamp(20px, 1.75vw, 56px);
+    font-size: clamp(16px, 2.75vw, 32px);
     font-family: "Inter Regular";
 }
 .office-span {
     color: var(--mainRed);
-    font-size: clamp(20px, 1.75vw, 56px);
+    font-size: clamp(16px, 2.75vw, 32px);
     font-family: "Inter Semi Bold";
+}
+.office-heading {
+    font-size: clamp(26px, 4vw, 56px);
+    font-family: "Inter Bold";
+    color: var(--mainGray);
 }
 
 /* Секция районных отделений */
 .district-offices-section {
-    gap: 5vw;
+    gap: 2.5vw;
 }
 .office-container {
     width: 100%;
     text-align: center;
-    gap: 3vw;
+    gap: 1vw;
 }
 .office-name {
     text-align: center;
     color: var(--mainGray);
-    font-size: clamp(20px, 2vw, 60px);
+    font-size: clamp(20px, 3vw, 42px);
     font-family: "Inter Bold";
 }
 

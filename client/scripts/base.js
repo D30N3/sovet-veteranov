@@ -15,13 +15,3 @@ overlay.addEventListener("click", () => {
     menu.classList.remove("active");
     overlay.classList.remove("active");
 });
-
-// Active Button
-const btn = document.querySelector(".button");
-btn.addEventListener("click", () => {
-    if (btn.classList.contains("active")) {
-        btn.classList.remove("active");
-    } else {
-        btn.classList.add("active");
-    }
-});
