@@ -148,7 +148,6 @@ function renderPosts(renderNum) {
 
     for (let i = 0; i < actualRenderNum; i++) {
         const post = posts[i];
-        
         if (!post) continue;
 
         container.insertAdjacentHTML('beforeend',
@@ -178,7 +177,6 @@ function renderSelectedPosts(renderNum) {
 
     for (let i = 0; i < actualRenderNum; i++) {
         const post = selectedContainer[i];
-        
         if (!post) continue;
 
         selectedPostsContainer.insertAdjacentHTML('beforeend',
@@ -221,7 +219,7 @@ function containerUpdate() {
 
 hashtagButtons.forEach((hashtag) => {
     hashtag.addEventListener('click', () => {
-        const hashtagText = hashtag.textContent.trim();
+        const hashtagText = hashtag.textContent;
         hashtag.classList.toggle('active');
 
         loadPostNum = 4;
@@ -237,7 +235,7 @@ hashtagButtons.forEach((hashtag) => {
             
         } else {
             selectedContainer = selectedContainer.filter(post => 
-                post.hashtag.trim() !== hashtagText
+                post.hashtag !== hashtagText
             );
         }
 
@@ -246,7 +244,7 @@ hashtagButtons.forEach((hashtag) => {
     });
 });
 
-// Post load logic
+// Page load logic
 const loadButton = document.getElementById("loadPosts");
 let loadPostNum = 4;
 
@@ -261,6 +259,17 @@ loadButton.addEventListener('click', () => {
         loadPostNum += 4;
         renderPosts(loadPostNum);
         containerUpdate();
+    }
+});
+
+// Active Button
+const btn = document.querySelector(".button");
+
+btn.addEventListener("click", () => {
+    if (btn.classList.contains("active")) {
+        btn.classList.remove("active");
+    } else {
+        btn.classList.add("active");
     }
 });
 
