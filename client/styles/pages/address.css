@@ -99,7 +99,9 @@
   .address-buttons-container {
       gap: 40px;
   }
-  
+  .button {
+    height: 55px;
+  }
   }
   
   /* Большие планшеты (900px - 992px) */
