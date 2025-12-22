@@ -160,8 +160,7 @@ header {
 footer {
     background-color: #2C2C2C;
     padding: 4vw 0;
-    max-width: 2048px;
-    margin: 0 auto;
+    
 }
 .footer-container {
     display: flex;
@@ -191,6 +190,7 @@ footer {
 .links-cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     column-gap: 9px;
     row-gap: 12px;
 }
