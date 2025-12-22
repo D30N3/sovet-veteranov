@@ -1,276 +1,281 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdminPanel</title>
-    <link rel="stylesheet" href="../../styles/base.css"> 
-    <link rel="stylesheet" href="../../styles/components.css">
-    <link rel="stylesheet" href="../../styles/fonts.css">
-    <link rel="stylesheet" href="../../styles/layout.css">
-    <link rel="stylesheet" href="../../styles/pages/address.css">
-    <link rel="stylesheet" href="../../styles/pages/admin.css">
+
+<link rel="preload" href="../../styles/base.css" as="style">
+<link rel="preload" href="../../styles/components.css" as="style">
+<link rel="stylesheet" href="../../styles/base.css"> 
+<link rel="stylesheet" href="../../styles/components.css">
+<link rel="stylesheet" href="../../styles/fonts.css">
+<link rel="stylesheet" href="../../styles/layout.css">
+<link rel="stylesheet" href="../../styles/pages/admin.css">
+
+<!-- Preload изображений выше fold -->
+<link rel="preload" href="../../assets/images/template.jpeg" as="image">
+<link rel="preload" href="../../assets/icons/burger-button.svg" as="image">
+
 </head>
 <body>
-    
-    <header>
-        <div class="header-container container">
-            <div class="header-logo-container">
-                <img src="../../assets/images/template.jpeg" alt="logo-image">
-            </div>
-            
-            <p class="organization-naming">Совет ветеранов</p>
-            <button id="burger-button"><img src="../../assets/icons/burger-button.svg" alt="burger-button"></button>
-
-            <div class="header-navigation-container" id="mobile-menu">
-                <nav class="header-navigation">
-                    <ul>
-                        <li><a href="../../index.html">Главная</a></li>
-                        <li><a href="../../index.html">Новости</a></li>
-                        <li><a href="#">Команда</a></li>
-                        <li><a href="../../pages/committee/committee.html">Комитеты</a></li>
-                        <li><a href="#">Обратиться</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="line header-line"></div>
-            </div>
-
-            <div class="header-navigation-container">
-                <nav class="header-navigation">
-                    <ul>
-                        <li><a href="../../index.html">Главная</a></li>
-                        <li><a href="../../index.html">Новости</a></li>
-                        <li><a href="#">Команда</a></li>
-                        <li><a href="../../pages/committee/committee.html">Комитеты</a></li>
-                        <li><a href="#">Обратиться</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="line header-line"></div>
-            </div>
+<header>
+    <div class="header-container container">
+        <div class="header-logo-container">
+            <img src="../../assets/images/template.jpeg" alt="logo-image" width="80" height="80">
         </div>
-    </header>
+        
+        <p class="organization-naming">Совет ветеранов</p>
+        <button id="burger-button"><img src="../../assets/icons/burger-button.svg" alt="burger-button" width="30" height="30"></button>
+
+        <div class="header-navigation-container" id="mobile-menu">
+            <nav class="header-navigation">
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../../index.html">Новости</a></li>
+                    <li><a href="#">Команда</a></li>
+                    <li><a href="../../pages/committee/committee.html">Комитеты</a></li>
+                    <li><a href="#">Обратиться</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="line header-line"></div>
+        </div>
+
+        <div class="header-navigation-container">
+            <nav class="header-navigation">
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../../index.html">Новости</a></li>
+                    <li><a href="#">Команда</a></li>
+                    <li><a href="../../pages/committee/committee.html">Комитеты</a></li>
+                    <li><a href="#">Обратиться</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="line header-line"></div>
+        </div>
+    </div>
+</header>
 
 
-    <main style="margin-top: 50px; margin-bottom: 300px;">
-        <div class="main-container container">
-            <div class="global-heading" style="text-align: center; margin-bottom: 70px;">Админ-панель</div>
+<main style="margin-top: 50px; margin-bottom: 300px;">
+    <div class="main-container container">
+        <div class="global-heading admin-heading" style="text-align: center; margin-bottom: 70px;">Админ-панель</div>
 
-            <div class="forms">
-                <form for="new-post" action="" class="flex-col" style="gap: 30px;">
-                    <div class="global-heading form-heading" style="text-align: center;">Форма для создания нового поста</div>
+        <div class="forms">
+            <form for="new-post" action="" class="flex-col" style="gap: 35px;">
+                <div class="global-heading form-heading" style="text-align: center;">Форма для создания нового поста</div>
 
-                    <div class="input-heading">
-                        <p class="global-heading input-heading-element">Заголовок</p>
-                        <input class="input" type="text" placeholder="Напишите заголовок, который выделится другим цветом">
+                <div class="input-heading">
+                    <p class="global-heading input-heading-element">Заголовок</p>
+                    <input class="input" type="text" placeholder="Напишите заголовок, который выделится другим цветом">
+                </div>
+
+                <div class="input-heading-2">
+                    <p class="global-heading input-heading-element">Заголовок</p>
+                    <input class="input" type="text" placeholder="Напишите остальную часть заголовка">
+                </div>
+
+                <div class="input-photo">
+                    <p class="global-heading input-heading-element">Фотография</p>
+                    <input class="input" type="text" placeholder="Загрузите фотографию" style="height: 200px;">
+                </div>
+
+                <div class="date-hastag">
+                    <div class="date">
+                        <p class="global-heading input-heading-element">Дата</p>
+                        <input type="text" class="input date-input" placeholder="Панель с датой" style="height: 250px;">
                     </div>
+                    <div class="hastag">
+                        <p class="global-heading input-heading-element">Хештег (если нужен)</p>
 
-                    <div class="input-heading-2">
-                        <p class="global-heading input-heading-element">Заголовок</p>
-                        <input class="input" type="text" placeholder="Напишите остальную часть заголовка">
-                    </div>
+                        <div class="hastag-button-cont">
+                            <div class="hastag-input">
+                                <button type="button" class="input hastag-button" id="hastag-btn" style="border-radius: 10px;">
+                                    <p>Выберите Хештег</p>
+                                </button>
 
-                    <div class="input-photo">
-                        <p class="global-heading input-heading-element">Фотография</p>
-                        <input class="input" type="text" placeholder="Загрузите фотографию" style="height: 200px;">
-                    </div>
+                                <img class="arrow-bottom unrotate" src="../../assets/icons/arrow-bottom.svg" alt="Стрелка вниз" width="25" height="25" loading="lazy">
+                            </div>
 
-                    <div class="date-hastag">
-                        <div class="date">
-                            <p class="global-heading input-heading-element" >Дата</p>
-                            <input type="text" class="input date-input" placeholder="Панель с датой" style="height: 250px;">
-                        </div>
-                        
-                        <div class="hastag">
-                            <p class="global-heading input-heading-element">Хештег (если нужен)</p>
+                            <div class="hastag-list-container flex-center">
+                                <div class="hastag-list-color-container" id="hastag-list">
+                                    <div class="hastag-list">
+                                        <ul class="flex-col hastag-list-element">
+                                            <li><a href="" class="hastag-list-link">#Спорт</a></li>
+                                            <li><a href="" class="hastag-list-link">#Культура</a></li>
+                                            <li><a href="" class="hastag-list-link">#Разное</a></li>
+                                            <li><a href="" class="hastag-list-link">#Образование</a></li>
+                                            <li><a href="" class="hastag-list-link">#Военно-патриотический комитет</a></li>
+                                        </ul>
+                                    </div>
 
-                            <div class="hastag-button-cont">
-                                <div class="hastag-input">
-                                    <button type="text" class="input hastag-button" id="hastag-btn" style="border-radius: 10px;">
-                                        <p>Выберите Хештег</p>
-                                    </button>
-
-                                    <img class="arrow-bottom unrotate" src="../../assets/icons/arrow-bottom.svg" alt="Стрелка вниз" width="25px">
-                                </div>
-    
-                                <div class="hastag-list-container flex-center">
-                                    <div class="hastag-list-color-container" id="hastag-list">
-                                        <div class="hastag-list">
-                                            <ul class="flex-col hastag-list-element">
-                                                <li><a href="" class="hastag-list-link">#Спорт</a></li>
-                                                <li><a href="" class="hastag-list-link">#Культура</a></li>
-                                                <li><a href="" class="hastag-list-link">#Разное</a></li>
-                                                <li><a href="" class="hastag-list-link">#Образование</a></li>
-                                                <li><a href="" class="hastag-list-link">#Военно-патриотический комитет</a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="hastag-list">
-                                            <ul class="flex-col hastag-list-element">
-                                                <li><a href="" class="hastag-list-link">#Отдых</a></li>
-                                                <li><a href="" class="hastag-list-link">#Здоровье</a></li>
-                                                <li><a href="" class="hastag-list-link">#ЖКХ</a></li>
-                                                <li><a href="" class="hastag-list-link">#Социально-бытовой комитет</a></li>
-                                                <li><a href="" class="hastag-list-link">#Проблемные вопросы</a></li>
-                                                <li><a href="" class="hastag-list-link">#Решение проблемных вопросов</a></li>
-                                            </ul>
-                                        </div>
-
+                                    <div class="hastag-list">
+                                        <ul class="flex-col hastag-list-element">
+                                            <li><a href="" class="hastag-list-link">#Отдых</a></li>
+                                            <li><a href="" class="hastag-list-link">#Здоровье</a></li>
+                                            <li><a href="" class="hastag-list-link">#ЖКХ</a></li>
+                                            <li><a href="" class="hastag-list-link">#Социально-бытовой комитет</a></li>
+                                            <li><a href="" class="hastag-list-link">#Проблемные вопросы</a></li>
+                                            <li><a href="" class="hastag-list-link">#Решение проблемных вопросов</a></li>
+                                        </ul>
                                     </div>
 
                                 </div>
+
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="main-text">
-                        <div class="input-heading-2">
-                            <p class="global-heading input-heading-element">Основной текст</p>
-                            <textarea class="input" placeholder="Напишите текст для новых новостей" style="height: 200px; border-radius: 30px;"></textarea>
-                        </div>
-                    </div>
-
-                    <button class="button" style="width: 100%; margin-top: 30px;">Создать пост</button>
-
-                    <div class="line" style="margin: 100px auto; background-color: #1C1C1C;"></div>
-                </form>
-
-
-                <form for="new-hastag" action="" class="flex-col" style="gap: 30px;">
-                    <div class="global-heading form-heading" style="text-align: center;">Форма для создания нового хештега (#)</div>
-
-                    <div class="input-heading" style="margin-top: 20px;">
-                        <p class="global-heading input-heading-element">Название хештега</p>
-                        <input class="input" type="text" placeholder="Напишите название хештега" style="margin-top: 10px;">
-                        <button class="button" style="width: 100%; margin-top: 30px;">Создать хештег</button>
-                    </div>
-
-                    <div class="line" style="margin: 100px auto; background-color: #1C1C1C;"></div>
-                </form>
-
-
-
-                <form for="new-comand-comitet" action="" class="flex-col" style="gap: 30px;">
-                    <div class="global-heading form-heading" style="text-align: center;">Форма для создания члена комитета</div>
-
-                    <div class="input-heading">
-                        <p class="global-heading input-heading-element">ФИО</p>
-                        <input class="input" type="text" placeholder="Введите ФИО члена команды">
-                    </div>
-
-
-                    <div class="input-photo">
-                        <p class="global-heading input-heading-element" >Фотография</p>
-                        <input class="input" type="text" placeholder="Загрузите фотографию" style="height: 200px;">
-                    </div>
-
-                    <div class="main-text">
-                        <div class="input-heading-2">
-                            <p class="global-heading input-heading-element" >Основной текст</p>
-                            <textarea class="input" placeholder="Напишите текст для новых новостей" style="height: 200px; border-radius: 30px;"></textarea>
-                        </div>
-                    </div>
-
-                    <button class="button" style="width: 100%; margin-top: 30px;">Создать описание члена команды</button>
-
-                    <div class="line" style="margin: 100px auto; background-color: #1C1C1C;"></div>
-                </form>
-
-                <form for="new-comand" action="" class="flex-col" style="gap: 30px;">
-                    <div class="global-heading form-heading" style="text-align: center;">Форма для создания члена команды</div>
-
-                    <div class="input-heading">
-                        <p class="global-heading input-heading-element">ФИО</p>
-                        <input class="input" type="text" placeholder="Введите ФИО члена команды">
-                    </div>
-
-
-                    <div class="input-photo">
-                        <p class="global-heading input-heading-element">Фотография</p>
-                        <input class="input" type="text" placeholder="Загрузите фотографию" style="height: 200px;">
-                    </div>
-
-                    <div class="main-text">
-                        <div class="input-heading-2">
-                            <p class="global-heading input-heading-element">Основной текст</p>
-                            <textarea class="input" placeholder="Напишите текст для новых новостей" style="height: 200px; border-radius: 30px;"></textarea>
-                        </div>
-                    </div>
-
-                    <button class="button" style="width: 100%; margin-top: 30px;">Создать описание члена команды</button>
-
-                    <div class="line" style="margin: 100px auto; background-color: #1C1C1C;"></div>
-                </form>
-            </div>
-            
-
-            <div class="events-cont">
-                <div class="events flex-col" style="gap: 30px;">
-                    <p class="global-heading form-heading input-heading-element" style="text-align: center;">Управление событиями</p>
-
-                    <div class="holiday flex-center" style="gap: 30px">
-                        <p class="paragraph holiday-heading" style="font-weight: 800;">Праздник (дата)</p>
-                        <button class=" holiday-button">Украсить сайт</button>
-                    </div>
-
-                    <div class="holiday flex-center" style="gap: 30px">
-                        <p class="paragraph holiday-heading" style="font-weight: 800;">Праздник (дата)</p>
-                        <button class=" holiday-button">Украсить сайт</button>
-                    </div>
-
-                    <div class="holiday flex-center" style="gap: 30px">
-                        <p class="paragraph holiday-heading" style="font-weight: 800;">Праздник (дата)</p>
-                        <button class=" holiday-button">Добавить эффекты</button>
-                    </div>
-
-
-                    <div class="holiday flex-center" style="gap: 30px">
-                        <p class="paragraph holiday-heading" style="font-weight: 800;">Праздник (дата)</p>
-                        <button class=" holiday-button">Добавить эффекты</button>
+                <div class="main-text">
+                    <div class="input-heading-2">
+                        <p class="global-heading input-heading-element">Основной текст</p>
+                        <textarea class="input" placeholder="Напишите текст для новых новостей" style="height: 200px;"></textarea>
                     </div>
                 </div>
 
-                <button class="button" style="width: 100%; margin-top: 30px;">Отчистить сайт от эффектов</button>
-            </div>
+                <button type="submit" class="button" style="width: 100%;">Создать пост</button>
 
+                <div class="line" style="margin: 70px auto 100px auto; background-color: #1C1C1C;"></div>
+            </form>
+
+
+            <form for="new-hastag" action="" class="flex-col" style="gap: 30px;">
+                <div class="global-heading form-heading" style="text-align: center;">Форма для создания нового хештега (#)</div>
+
+                <div class="input-heading" style="margin-top: 20px;">
+                    <p class="global-heading input-heading-element">Название хештега</p>
+                    <input class="input" type="text" placeholder="Напишите название хештега">
+                    <button type="submit" class="button" style="width: 100%; margin-top: 30px;">Создать хештег</button>
+                </div>
+
+                <div class="line" style="margin: 60px auto 100px auto; background-color: #1C1C1C;"></div>
+            </form>
+            <form for="new-comand-comitet" action="" class="flex-col" style="gap: 30px;">
+                <div class="global-heading form-heading" style="text-align: center;">Форма для создания члена комитета</div>
+
+                <div class="input-heading">
+                    <p class="global-heading input-heading-element">ФИО</p>
+                    <input class="input" type="text" placeholder="Введите ФИО члена команды">
+                </div>
+
+
+                <div class="input-photo">
+                    <p class="global-heading input-heading-element">Фотография</p>
+                    <input class="input" type="text" placeholder="Загрузите фотографию" style="height: 200px;">
+                </div>
+
+                <div class="main-text">
+                    <div class="input-heading-2">
+                        <p class="global-heading input-heading-element">Основной текст</p>
+                        <textarea class="input" placeholder="Напишите текст для новых новостей" style="height: 200px; border-radius: 30px;"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="button" style="width: 100%; margin-top: 30px;">Создать описание члена команды</button>
+
+                <div class="line" style="margin: 100px auto 120px auto; background-color: #1C1C1C;"></div>
+            </form>
+
+            <form for="new-comand" action="" class="flex-col" style="gap: 30px;">
+                <div class="global-heading form-heading" style="text-align: center;">Форма для создания члена команды</div>
+
+                <div class="input-heading">
+                    <p class="global-heading input-heading-element">ФИО</p>
+                    <input class="input" type="text" placeholder="Введите ФИО члена команды">
+                </div>
+
+
+                <div class="input-photo">
+                    <p class="global-heading input-heading-element">Фотография</p>
+                    <input class="input" type="text" placeholder="Загрузите фотографию" style="height: 200px;">
+                </div>
+
+                <div class="main-text">
+                    <div class="input-heading-2">
+                        <p class="global-heading input-heading-element">Основной текст</p>
+                        <textarea class="input" placeholder="Напишите текст для новых новостей" style="height: 200px;"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="button" style="width: 100%;">Создать описание члена команды</button>
+
+                <div class="line" style="margin: 100px auto 120px auto; background-color: #1C1C1C;"></div>
+            </form>
         </div>
-    </main>
+        
+
+        <div class="events-cont">
+            <div class="events flex-col" style="gap: 30px;">
+                <p class="global-heading form-heading input-heading-element" style="text-align: center;">Управление событиями</p>
+
+                <div class="holiday flex-center" style="gap: 30px">
+                    <p class="paragraph holiday-heading" style="font-weight: 800;">Праздник (дата)</p>
+                    <button type="button" class="holiday-button">Украсить сайт</button>
+                </div>
+
+                <div class="holiday flex-center" style="gap: 30px">
+                    <p class="paragraph holiday-heading" style="font-weight: 800;">Праздник (дата)</p>
+                    <button type="button" class="holiday-button">Украсить сайт</button>
+                </div>
+
+                <div class="holiday flex-center" style="gap: 30px">
+                    <p class="paragraph holiday-heading" style="font-weight: 800;">Праздник (дата)</p>
+                    <button type="button" class="holiday-button">Добавить эффекты</button>
+                </div>
 
 
-    <footer>
-        <div class="footer-container container">
-            <div class="footer-navigation-container">
-                <p>Навигация:</p>
-                <nav>
-                    <ul>
-                        <li><a href="../../index.html">Главная</a></li>
-                        <li><a href="../../index.html">Новости</a></li>
-                        <li><a href="#">Команда</a></li>
-                        <li><a href="../../pages/committee/committee.html">Комитеты</a></li>
-                        <li><a href="#">Обратиться</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-            
-            <div class="links-cards-container">
-                <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template"></div>
-                <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template"></div>
-                <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template"></div>
-                <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template"></div>
-                <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template"></div>
-                <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template"></div>
+                <div class="holiday flex-center" style="gap: 30px">
+                    <p class="paragraph holiday-heading" style="font-weight: 800;">Праздник (дата)</p>
+                    <button type="button" class="holiday-button">Добавить эффекты</button>
+                </div>
             </div>
 
-            <div class="contacts-container">
-                <p>© Челябинский городской Совет ветеранов, 2019 г. <br>Изготовлено с использованием средств Фонда президентских грантов</p>
-                <p>г. Челябинск, пл. Революции, дом 2, к. 510 <br><u>+7 351 266-62-88</u></p>
-            </div>
+            <button type="button" class="button" style="width: 100%; margin-top: 30px;">Отчистить сайт от эффектов</button>
         </div>
-    </footer>
 
-    <script src="../../scripts/adminPanel.js"></script>
-    <script src="../../scripts/base.js"></script>
+    </div>
+</main>
+
+
+<footer>
+    <div class="footer-container container">
+        <div class="footer-navigation-container">
+            <p>Навигация:</p>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Главная</a></li>
+                    <li><a href="../../index.html">Новости</a></li>
+                    <li><a href="#">Команда</a></li>
+                    <li><a href="../../pages/committee/committee.html">Комитеты</a></li>
+                    <li><a href="#">Обратиться</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="links-cards-container">
+            <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template" width="100" height="100" loading="lazy"></div>
+            <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template" width="100" height="100" loading="lazy"></div>
+            <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template" width="100" height="100" loading="lazy"></div>
+            <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template" width="100" height="100" loading="lazy"></div>
+            <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template" width="100" height="100" loading="lazy"></div>
+            <div class="card-element"><img src="../../assets/images/template.jpeg" alt="template" width="100" height="100" loading="lazy"></div>
+        </div>
+
+        <div class="contacts-container">
+            <p>© Челябинский городской Совет ветеранов, 2019 г. <br>Изготовлено с использованием средств Фонда президентских грантов</p>
+            <p>г. Челябинск, пл. Революции, дом 2, к. 510 <br><u>+7 351 266-62-88</u></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Defer скриптов для ускорения загрузки -->
+<script src="../../scripts/adminPanel.js" defer></script>
+<script src="../../scripts/base.js" defer></script>
+
 </body>
 </html>
