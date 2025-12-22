@@ -190,6 +190,7 @@ textarea.input {
 .container {
     width: 80%;
     margin: 0 auto;
+    max-width: 1536px;
 }
 .flex-center {
     display: flex;
